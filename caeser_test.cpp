@@ -3,7 +3,7 @@
 #include "caesercipher.h"
 
 // Demonstrate some basic assertions.
-TEST(Caeser_Test, ShiftAtoCWithKey3)
+TEST(Caeser_Test, ShiftAtoDWithKey3)
 {
     //Arrange
     CaeserCipher unit = CaeserCipher();
