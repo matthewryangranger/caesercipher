@@ -10,3 +10,13 @@ char CaeserCipher::encrypt(const char& c, int i)
     char newChar = asciiValue;
     return newChar;
 }
+
+std::string CaeserCipher::encrypt(const std::string& s, int i)
+{
+    std::string result = new char[s.length()];
+    for (int j = 0; j < s.length(); j++)
+    {
+        result += {encrypt(s.at(j), i)};
+    }
+    return result;
+}
