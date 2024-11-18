@@ -17,8 +17,6 @@ std::string CaeserCipher::encrypt(const std::string& s, int i)
 {
     std::string result = new char[s.length()];
     for (const auto& c: s)
-    {
         result += encrypt(std::tolower(c), i);
-    }
     return result;
 }
