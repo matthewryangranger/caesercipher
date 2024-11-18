@@ -23,7 +23,7 @@ TEST(Caeser_Test, ShiftBEEtoDGGWithKey2)
     ASSERT_EQ("dgg", encrypted);
 }
 
-TEST(Caeser_Test, ShiftZtoZWithKey1)
+TEST(Caeser_Test, ShiftZtoAWithKey1)
 {
     //Arrange
     CaeserCipher unit = CaeserCipher();
