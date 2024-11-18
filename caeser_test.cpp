@@ -22,3 +22,23 @@ TEST(Caeser_Test, ShiftBEEtoDGGWithKey2)
     //Assert
     ASSERT_EQ("dgg", encrypted);
 }
+
+TEST(Caeser_Test, ShiftZtoZWithKey1)
+{
+    //Arrange
+    CaeserCipher unit = CaeserCipher();
+    //Act
+    std::string encrypted = unit.encrypt("z", 1);
+    //Assert
+    ASSERT_EQ("a", encrypted);
+}
+
+TEST(Caeser_Test, ShiftCapitalAToLowerEWithKey4)
+{
+    //Arrange
+    CaeserCipher unit = CaeserCipher();
+    //Act
+    std::string encrypted = unit.encrypt("A", 4);
+    //Assert
+    ASSERT_EQ("e", encrypted);
+}

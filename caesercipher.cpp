@@ -5,8 +5,13 @@ CaeserCipher::CaeserCipher() {}
 
 char CaeserCipher::encrypt(const char& c, int i)
 {
-    int asciiValue = c;
+    char c_lower = std::tolower(c);
+    int asciiValue = c_lower;
     asciiValue += i;
+    if (asciiValue >= 122)
+    {
+        asciiValue -= 26;
+    }
     char newChar = asciiValue;
     return newChar;
 }
@@ -14,9 +19,9 @@ char CaeserCipher::encrypt(const char& c, int i)
 std::string CaeserCipher::encrypt(const std::string& s, int i)
 {
     std::string result = new char[s.length()];
-    for (int j = 0; j < s.length(); j++)
+    for (const auto& c: s)
     {
-        result += {encrypt(s.at(j), i)};
+        result += {encrypt(c, i)};
     }
     return result;
 }
