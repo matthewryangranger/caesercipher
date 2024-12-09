@@ -6,9 +6,9 @@
 TEST(Caeser_Test, ShiftAtoDWithKey3)
 {
     //Arrange
-    CaeserCipher unit = CaeserCipher();
+    auto unit = CaeserCipher();
     //Act
-    char encrypted = unit.encrypt('a', 3);
+    char const encrypted = unit.encrypt('a', 3);
     //Assert
     ASSERT_EQ('d', encrypted);
 }
@@ -16,9 +16,9 @@ TEST(Caeser_Test, ShiftAtoDWithKey3)
 TEST(Caeser_Test, ShiftBEEtoDGGWithKey2)
 {
     //Arrange
-    CaeserCipher unit = CaeserCipher();
+    auto unit = CaeserCipher();
     //Act
-    std::string encrypted = unit.encrypt("bee", 2);
+    std::string const encrypted = unit.encrypt("bee", 2);
     //Assert
     ASSERT_EQ("dgg", encrypted);
 }
@@ -26,9 +26,9 @@ TEST(Caeser_Test, ShiftBEEtoDGGWithKey2)
 TEST(Caeser_Test, ShiftZtoAWithKey1)
 {
     //Arrange
-    CaeserCipher unit = CaeserCipher();
+    auto unit = CaeserCipher();
     //Act
-    std::string encrypted = unit.encrypt("z", 1);
+    std::string const encrypted = unit.encrypt("z", 1);
     //Assert
     ASSERT_EQ("a", encrypted);
 }
@@ -36,9 +36,9 @@ TEST(Caeser_Test, ShiftZtoAWithKey1)
 TEST(Caeser_Test, ShiftCapitalAToLowerEWithKey4)
 {
     //Arrange
-    CaeserCipher unit = CaeserCipher();
+    auto unit = CaeserCipher();
     //Act
-    std::string encrypted = unit.encrypt("A", 4);
+    std::string const encrypted = unit.encrypt("A", 4);
     //Assert
     ASSERT_EQ("e", encrypted);
 }
