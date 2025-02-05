@@ -50,7 +50,8 @@ std::string CaeserCipher::numerals(const std::string s)
         int newChar = (asciiValue - 96);
         result += std::to_string(newChar);
         if (i == s.length())
-            return result;
+            break;
         result += " ";
     }
+    return result;
 }

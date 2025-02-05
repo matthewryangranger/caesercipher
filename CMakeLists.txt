@@ -16,9 +16,6 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(caeserciphertest
-        caesercipher.cpp
-        caeser_test.cpp
-        caesercipher.h)
+add_executable(caeserciphertest caesercipher.cpp caeser_test.cpp caesercipher.h main.cpp)
 target_link_libraries(caeserciphertest GTest::gtest_main)
 gtest_discover_tests(caeserciphertest)
