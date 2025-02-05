@@ -5,10 +5,14 @@
 #include <string>
 
 class CaeserCipher {
-public:
-    CaeserCipher();  // Constructor declaration
+private:
     char encrypt(const char& c, int i);
+    char decrypt(const char& c, int i);
+public:
+    CaeserCipher();
     std::string encrypt(const std::string& s, int i);
+    std::string decrypt(const std::string& s, const char letter);
+    std::string numerals(const std::string s);
 };
 
 #endif
